@@ -17,7 +17,7 @@ instructions = """
   - Cities **on the red line** have equivalent percentage differences in both salaries and COL (e.g., a 10% higher salary but also a 10% higher COL).
   - Cities **below the red line** may provide worse opportunities for pursuing financial independence.
 - Hover over the top right of the figure and use the zoom tool (draw a square on the figure), zoom in/out, pan, and other functions to better visualize your cities of interest.
-- Example: With San Diego as the reference, San Francisco has a **35.3% higher average salary**, while its **cost of living is only 7% higher**. Pursuing FI in San Francisco is likely to be easier, on average, than in San Diego.
+- Example: With Los Angeles, CA as the reference, we observe that Seatle has a **39.4% higher average salary**, while its **cost of living is 1.6% lower**. Pursuing FI in Seatle is likely to be easier, on average, than in LA.
 - Data on salaries and cost of living is from **Numbeo (2024)**.
 """
 
