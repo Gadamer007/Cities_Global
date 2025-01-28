@@ -19,7 +19,7 @@ instructions = """
 - Hover over the top right of the figure and use the zoom tool (draw a square on the figure), zoom in/out, pan, and other functions to better visualize your cities of interest.
 - Example: With Los Angeles, CA as the reference, we observe that Seatle has a **39.4% higher average salary**, while its **cost of living is 1.6% lower**. Pursuing FI in Seatle is likely to be easier, on average, than in LA.
 - Data on salaries and cost of living is from **Numbeo (2024)**.
-- Please read the FAQs below for more important information.
+- Please read the **FAQs** below for more important information.
 """
 
 st.write(instructions)
