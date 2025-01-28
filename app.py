@@ -3,7 +3,25 @@ import pandas as pd
 import plotly.express as px
 
 # Title for the Streamlit app
-st.title("Global Cost of Living vs Salary Analysis")
+st.title("Top Global Cities for Financial Independence")
+
+# Instructions for Using the Tool
+st.write("### Instructions for Using the Tool")
+
+instructions = """
+- This tool helps identify the most suitable **cities** for pursuing FI during the accumulation phase.
+- Select your **current country** from the dropdown menu above the graph. You can choose multiple countries if you wish.
+- Select your **reference city**: The graph maps **percentage differences** in salaries and cost of living (COL) relative to your selected city.
+- The **red dashed line** serves as a benchmark:
+  - Cities **above the red line** may provide better opportunities for pursuing financial independence.
+  - Cities **on the red line** have equivalent percentage differences in both salaries and COL (e.g., a 10% higher salary but also a 10% higher COL).
+  - Cities **below the red line** may provide worse opportunities for pursuing financial independence.
+- Hover over the top right of the figure and use the zoom tool (draw a square on the figure), zoom in/out, pan, and other functions to better visualize your cities of interest.
+- Example: With San Diego as the reference, San Francisco has a **35.3% higher average salary**, while its **cost of living is only 7% higher**. Pursuing FI in San Francisco is likely to be easier, on average, than in San Diego.
+- Data on salaries and cost of living is from **Numbeo (2024)**.
+"""
+
+st.write(instructions)
 
 # Load the embedded Excel file automatically
 @st.cache_data
@@ -110,6 +128,5 @@ if not filtered_data.empty:
     st.plotly_chart(scatter_plot, use_container_width=True)
 else:
     st.write("⚠ Please select at least one country to proceed.")
-
 
 
