@@ -73,8 +73,9 @@ if not filtered_data.empty:
             data,
             x='Col_Diff_%',
             y='Sal_Diff_%',
+            text='City_Short',  # Keep short city names next to bubbles
             color='Country',  # Assign colors by country
-            hover_data={'City': True, 'Col_Diff_%': ':.1f', 'Sal_Diff_%': ':.1f'},  # Keep full city name only
+            hover_data={'City_Short': False, 'City': True, 'Col_Diff_%': ':.1f', 'Sal_Diff_%': ':.1f'},  # Hide City_Short from hover box
             labels={
                 'Col_Diff_%': 'Cost of Living Difference (%)',
                 'Sal_Diff_%': 'Salary Difference (%)',
@@ -82,6 +83,7 @@ if not filtered_data.empty:
             title=f"Cost of Living vs Salary Comparison (Reference: {reference_city})",
             template="plotly_dark",
         )
+
         
         # Add red benchmark line
         fig.add_shape(
