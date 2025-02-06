@@ -6,9 +6,8 @@ import plotly.express as px
 st.title("Top Global Cities for Financial Independence")
 
 # Instructions for Using the Tool
-st.write("### Instructions for Using the Tool")
-
-instructions = """
+with st.expander("📖  Instructions (Click to Expand/Collapse)"):
+    st.write("""
 - This tool helps identify the most suitable **cities** for pursuing FI during the accumulation phase.
 - Select your **current country** from the dropdown menu above the graph. You can choose multiple countries if you wish.
 - Select your **reference city**: The graph maps **percentage differences** in salaries and cost of living (COL) relative to your selected city.
@@ -20,9 +19,8 @@ instructions = """
 - Example: With Los Angeles, CA as the reference, we observe that Seatle has a **39.4% higher average salary**, while its **cost of living is 1.6% lower**. Pursuing FI in Seatle is likely to be easier, on average, than in LA.
 - Data on salaries and cost of living is from **Numbeo (2024)**.
 - Please read the **FAQs** below for more important information.
-"""
+""")
 
-st.write(instructions)
 
 # Load the embedded Excel file automatically
 @st.cache_data
