@@ -44,7 +44,15 @@ data = load_data()
 
 # Create dropdown for country selection (multi-select)
 st.write("### Select Countries to Display Cities From")
-selected_countries = st.multiselect("Choose Countries:", sorted(data['Country'].unique()))
+# Default selection for Spain, France, and Italy
+default_countries = ["Spain", "France", "Italy"]
+available_countries = sorted(data['Country'].unique())
+
+# Ensure default countries exist in the dataset before setting them
+default_countries = [country for country in default_countries if country in available_countries]
+
+selected_countries = st.multiselect("Choose Countries:", available_countries, default=default_countries)
+
 
 # Filter cities based on selected countries
 filtered_data = data[data['Country'].isin(selected_countries)]
