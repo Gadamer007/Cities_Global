@@ -120,7 +120,7 @@ if not filtered_data.empty:
         fig.update_layout(
             height=600, width=1200,
             paper_bgcolor='black', plot_bgcolor='black',
-            margin=dict(l=40, r=40, t=50, b=5),
+            margin=dict(l=20, r=20, t=40, b=20),
             legend=dict(title_text="Selected Countries", font=dict(color="white")),  # Make legend text white
             title=dict(
                 text=f"Cost of Living vs Salary Comparison (Reference: {reference_city})",
