@@ -133,7 +133,7 @@ if not filtered_data.empty:
 
     # Display the plot
     scatter_plot = create_scatter_plot(filtered_data, reference_city)
-    st.plotly_chart(scatter_plot, use_container_width=True)
+    st.plotly_chart(scatter_plot)
 else:
     st.write("⚠ Please select at least one country to proceed.")
 
