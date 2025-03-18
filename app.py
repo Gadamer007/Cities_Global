@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # Title for the Streamlit app
-st.title("Top Globalll Cities for Financial Independence")
+st.title("Top Global Cities for Financial Independence")
 
 # Instructions for Using the Tool
 with st.expander("📖  Instructions (Click to Expand/Collapse)"):
