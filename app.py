@@ -118,7 +118,7 @@ if not filtered_data.empty:
                          showline=False)
         
         fig.update_layout(
-            height=600, width=1200,
+            height=400, width=1200,
             paper_bgcolor='black', plot_bgcolor='black',
             margin=dict(l=40, r=40, t=50, b=0),
             legend=dict(title_text="Selected Countries", font=dict(color="white")),  # Make legend text white
@@ -133,7 +133,7 @@ if not filtered_data.empty:
 
     # Display the plot
     scatter_plot = create_scatter_plot(filtered_data, reference_city)
-    st.plotly_chart(scatter_plot)
+    st.plotly_chart(scatter_plot, use_container_width=True)
 else:
     st.write("⚠ Please select at least one country to proceed.")
 
